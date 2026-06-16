@@ -1,0 +1,6 @@
+# The classic entry point to any language
+print("Hello, World!")
+
+# Capture user input and greet them dynamically
+user_name = input("What is your name? ")
+print(f"Welcome to Python, {user_name}!")
