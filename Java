@@ -1,0 +1,31 @@
+).
+public class Main {
+
+    // The main method is the entry point where your program starts executing.
+    public static void main(String[] args) {
+        
+        // 1. Variables and Data Types
+        String greeting = "Hello, World!";
+        int repetitions = 3;
+        boolean displayMessage = true;
+
+        // 2. Conditional Statement (If-Else)
+        if (displayMessage) {
+            System.out.println(greeting);
+            System.out.println("-------------------------");
+        }
+
+        // 3. Loop (For Loop)
+        // This runs 3 times, passing the current loop index to our custom method.
+        for (int i = 1; i <= repetitions; i++) {
+            printCalculation(i);
+        }
+    }
+
+    // 4. Custom Method
+    // A separate, reusable block of code that performs a specific calculation.
+    public static void printCalculation(int step) {
+        int result = step * 10;
+        System.out.println("Step " + step + " processed. Result: " + result);
+    }
+}
