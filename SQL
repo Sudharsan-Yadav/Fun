@@ -1,0 +1,21 @@
+-- Create and select the database
+CREATE DATABASE CompanyDB;
+USE CompanyDB;
+
+-- Create the Departments table
+CREATE TABLE departments (
+    department_id INT PRIMARY KEY,
+    department_name VARCHAR(50) NOT NULL,
+    location VARCHAR(50)
+);
+
+-- Create the Employees table with a Foreign Key connecting it to Departments
+CREATE TABLE employees (
+    employee_id INT PRIMARY KEY,
+    first_name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50) NOT NULL,
+    salary DECIMAL(10, 2),
+    hire_date DATE,
+    department_id INT,
+    FOREIGN KEY (department_id) REFERENCES departments(department_id)
+);
